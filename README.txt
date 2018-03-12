@@ -3,10 +3,9 @@
 
 You'll build a microservice application that uses Netflix Ribbon and Spring Cloud Netflix to provide client-side load balancing in calls to another microservice.
 
-[[initial]]
 == Write a server service
 
-Our &#8220;server&#8221; service is called Say Hello-Service. It will return a random greeting (picked out of a static list of three) from an endpoint accessible at `/greeting`. We're going to run multiple instances of this application locally alongside a client service application.
+Our "server" service is called Say Hello-Service. It will return a random greeting (picked out of a static list of three) from an endpoint accessible at `/greeting`. We're going to run multiple instances of this application locally alongside a client service application.
 
 == Access from a client service
 
@@ -21,7 +20,7 @@ $ curl http://localhost:8888/hello
 Greetings, Thiru!
 
 $ curl http://localhost:8888/hi?name=Chinna
-Salutations, Chinna!
+Hello, Chinna!
 ----
 
 == Trying it out
