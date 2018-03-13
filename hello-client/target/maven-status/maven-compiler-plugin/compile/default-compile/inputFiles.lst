@@ -1,2 +1,2 @@
-/Users/thiru/projects/github/springcloud/ribbon-example/client_site_ribbon_lb/hello-client/src/main/java/hello/UserApplication.java
-/Users/thiru/projects/github/springcloud/ribbon-example/client_site_ribbon_lb/hello-client/src/main/java/hello/SayHelloConfiguration.java
+/Users/thiru/projects/github/springcloud/ribbon-example/client_site_ribbon_lb/hello-client/src/main/java/hello/RibbonConfiguration.java
+/Users/thiru/projects/github/springcloud/ribbon-example/client_site_ribbon_lb/hello-client/src/main/java/hello/ClientApplication.java

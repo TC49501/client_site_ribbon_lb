@@ -27,9 +27,12 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringRunner;
 
+/**
+ * Test case to test Hello REST service
+ */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = SayHelloApplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-public class SayHelloApplicationTests {
+@SpringBootTest(classes = HelloServiceApplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+public class HelloServiceApplicationTests {
 
 	@LocalServerPort
 	private int port;
@@ -37,6 +40,10 @@ public class SayHelloApplicationTests {
 	@Autowired
 	private TestRestTemplate testRestTemplate;
 
+	/**
+	 * Test case to test ping endpoint
+	 * @throws Exception
+	 */
 	@Test
 	public void shouldReturn200WhenSendingRequestToRoot() throws Exception {
 		@SuppressWarnings("rawtypes") ResponseEntity<String> entity = this.testRestTemplate.getForEntity(
@@ -46,6 +53,10 @@ public class SayHelloApplicationTests {
 		then(entity.getBody()).isEqualTo("Ping!");
 	}
 
+	/**
+	 * Test case to test greeting endpoint
+	 * @throws Exception
+	 */
 	@Test
 	public void shouldReturn200WhenSendingRequestToGreeting() throws Exception {
 		@SuppressWarnings("rawtypes") ResponseEntity<String> entity = this.testRestTemplate.getForEntity(

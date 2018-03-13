@@ -9,12 +9,19 @@ import org.slf4j.LoggerFactory;
 
 import java.util.*;
 
+/**
+ * This is the simple Hello springboot REST service that client applications can consume.
+ */
 @RestController
 @SpringBootApplication
-public class SayHelloApplication {
+public class HelloServiceApplication {
 
-  private static Logger log = LoggerFactory.getLogger(SayHelloApplication.class);
+  private static Logger log = LoggerFactory.getLogger(HelloServiceApplication.class);
 
+  /**
+   * Rest endpoint
+   * @return
+   */
   @RequestMapping(value = "/greeting")
   public String greet() {
     log.info("Access /greeting");
@@ -26,13 +33,21 @@ public class SayHelloApplication {
     return greetings.get(randomNum);
   }
 
+  /**
+   * Ribbon client ping this endpoint every few seconds
+   * @return
+   */
   @RequestMapping(value = "/")
   public String home() {
     log.info("Access /");
     return "Ping!";
   }
 
+  /**
+   *
+   * @param args
+   */
   public static void main(String[] args) {
-    SpringApplication.run(SayHelloApplication.class, args);
+    SpringApplication.run(HelloServiceApplication.class, args);
   }
 }

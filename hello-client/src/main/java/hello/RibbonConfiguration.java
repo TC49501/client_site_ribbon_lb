@@ -9,16 +9,29 @@ import com.netflix.loadbalancer.IRule;
 import com.netflix.loadbalancer.PingUrl;
 import com.netflix.loadbalancer.AvailabilityFilteringRule;
 
-public class SayHelloConfiguration {
+/**
+ * Ribbon custom Configuration
+ */
+public class RibbonConfiguration {
 
   @Autowired
   IClientConfig ribbonClientConfig;
 
+  /**
+   *
+   * @param config
+   * @return
+   */
   @Bean
   public IPing ribbonPing(IClientConfig config) {
     return new PingUrl();
   }
 
+  /**
+   *
+   * @param config
+   * @return
+   */
   @Bean
   public IRule ribbonRule(IClientConfig config) {
     return new AvailabilityFilteringRule();

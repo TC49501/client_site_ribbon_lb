@@ -26,8 +26,8 @@ import org.springframework.web.bind.annotation.RestController;
  * @author Marcin Grzejszczak
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = UserApplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-public class UserApplicationTests {
+@SpringBootTest(classes = ClientApplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+public class ClientApplicationTests {
 
     ConfigurableApplicationContext application1;
     ConfigurableApplicationContext application2;
