@@ -29,8 +29,8 @@ public class ClientApplication {
     return new RestTemplate();
   }
 
-  @Autowired
-  RestTemplate restTemplate;
+  //@Autowired
+  //RestTemplate restTemplate;
 
   /**
    * Expose REST endpoint
@@ -42,7 +42,7 @@ public class ClientApplication {
   public String hello(@RequestParam(value="name", defaultValue="Thiru") String name) {
     log.info("Access /hello");
 
-    String greeting = this.restTemplate.getForObject("http://hello-service/greeting", String.class);
+    String greeting = restTemplate().getForObject("http://hello-service/greeting", String.class);
     return String.format("%s, %s!", greeting, name);
   }
 
